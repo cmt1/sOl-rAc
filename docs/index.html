@@ -27,6 +27,9 @@
         canvas {
             text-align: center;
         }
+        button#startGame.btn.btn-outline-warning:hover{
+            color: #E94B3CFF;
+        }
 
     </style>
 
@@ -36,7 +39,7 @@
 
 <body style="background-color:#393b44;">
 
-    <nav class="navbar navbar-light" style="background-color: #E94B3CFF; color: 393b44;">
+    <nav class="navbar navbar-light" style="background-color: #E94B3CFF; color: #393b44;">
         <b>U<i>N</i>O - PU<i>N</i>CH</b></h1>
     </nav>
     <br>
@@ -56,10 +59,24 @@
         <h6 style="text-align: center; color:#E94B3CFF;"><b>Controls</b></h6>
         <h6 style="text-align: center; color:#E94B3CFF;">PLAYER 1: (W=up, A=left, S=down, D=right, SPACE=punch)</h6>
         <h6 style="text-align: center; color:#E94B3CFF;">PLAYER 2: (I=up, J=left, K=down, L=right, ENTER=punch)</h6>
-
-        <br>
-        <div id="content" style="align-content: center;"></div>
+<br>
+       <button onclick="startGame()" id="startGame" type="button" class="btn btn-outline-warning" style="background-color: #393b44;">Launch Game</button>
+<br>
+<br>
+        <div id="content" style="align-content: center; display: none;"></div>
 </div>
+<script>
+    var game = document.getElementById("content");
+function startGame() {
+    
+    
+    if (game.style.display = "none") {
+        game.style.display = "block";
+    }
+}
+
+
+</script>
 
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
