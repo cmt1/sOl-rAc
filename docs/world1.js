@@ -8,28 +8,39 @@ class world1 extends Phaser.Scene {
     }
     //loads images
     preload() {
+
+        this.load.image('Back', 'asset/UP-Bg.png')
         this.load.image('Los', 'asset/Sprite-Carlos1.png')
-        this.load.image('Shana', 'asset/Sprite-Lashana1.png')
-        this.load.image('Bag', 'asset/Sprite-PunchBag2.png')
+        this.load.image('Los2', 'asset/Sprite-Carlos2.png')
+        this.load.image('Bag', 'asset/Sprite-PunchBag1.png')
+         this.load.image('Bag', 'asset/Sprite-PunchBag2.png')
+        this.load.image('Open', 'asset/UP-fullc.png')
+        this.load.image('Full', 'asset/UP-full.png')
+        
     }
 
     // adds all the objects that will placed in game
     create() {
         //places image on screen
-        this.image1 = this.add.image(200, 300, 'Los')
-        this.image2 = this.add.image(550, 295, 'Shana')
-        this.image3 = this.add.image(350, 295, 'Bag')
+        this.image = this.add.image(400, 315, 'Back')
+        this.image2 = this.add.image(400, 455, 'Full')
+ this.image4 = this.add.image(400, 455, 'Open')
+        this.image1 = this.add.image(51, 480, 'Los')
+
+        this.image3 = this.add.image(400, 485, 'Bag')
+
         //this helps is how to control image movement with a button press
-        this.input.keyboard.on("keyup_D", function (event) {
-            this.image.x += 40;
-        }, this);
 
+        //  this.input.keyboard.on("keyup_D", function (event) {
+        //     this.image.x += 40;
+        //}, this);
 
+        //primary controls
         this.input.keyboard.on("keydown_A", function (event) {
             this.image1.x -= 40;
         }, this);
         this.input.keyboard.on("keydown_D", function (event) {
-            this.image1.x += 40;
+            this.image1.x += 50;
         }, this);
         this.input.keyboard.on("keydown_W", function (event) {
             this.image1.y -= 40;
@@ -39,20 +50,22 @@ class world1 extends Phaser.Scene {
             this.image1.y += 40;
         }, this);
 
-        //player 2
-        this.input.keyboard.on("keydown_J", function (event) {
-            this.image2.x -= 40;
+        //secondary controls
+        this.input.keyboard.on("keydown_LEFT", function (event) {
+            this.image1.x -= 40;
         }, this);
-        this.input.keyboard.on("keydown_L", function (event) {
-            this.image2.x += 40;
+        this.input.keyboard.on("keydown_RIGHT", function (event) {
+            this.image1.x += 40;
         }, this);
-        this.input.keyboard.on("keydown_I", function (event) {
-            this.image2.y -= 40;
+        this.input.keyboard.on("keydown_UP", function (event) {
+            this.image1.y -= 40;
         }, this);
 
-        this.input.keyboard.on("keydown_K", function (event) {
-            this.image2.y += 40;
+        this.input.keyboard.on("keydown_DOWN", function (event) {
+            this.image1.y += 40;
         }, this);
+
+
 
 
     }
