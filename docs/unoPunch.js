@@ -7,15 +7,15 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-    
+
         }
     },
-     dom: {
+    dom: {
         createContainer: true
     },
     //This is setting up the different levels
-    scene: [ world1 ]
+    scene: [world1]
 };
 
 //Starts new game with configutions
-var game = new Phaser.Game(config); 
+var game = new Phaser.Game(config);

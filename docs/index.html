@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="asset/carlos.favicon.png">
-    <title>UNO-PUNCH</title>
-   
+    <title>uNO-PuNCH</title>
+
 
     <!--Template based on URL below-->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
@@ -42,48 +42,52 @@
 <body style="background-color:#393b44;">
 
     <nav class="navbar navbar-light" style="text-align: center;  background-color: #E94B3CFF; color: #393b44;">
-        <h4 style="text-align: center; color: #393b44;"><b>U<i>N</i>O - PU<i>N</i>CH</b></h4> <button onclick="startGame()" id="startGame" type="button" class="btn btn-outline-warning" style="background-color: #393b44;">Launch Game</button>
+        <h4 style="text-align: center; color: #393b44;"><b>u<i>N</i>O - Pu<i>N</i>CH</b></h4>
+        <audio src="asset/PUNCH.mp3" id="punchs" type="audio/mpeg"></audio>
+        <button onclick="startGame()" id="startGame" type="button" class="btn btn-outline-warning" style="background-color: #393b44;">Launch Game</button>
     </nav>
 
-   <br>
- <p style="text-align: center; color:#E94B3CFF;">U<i>N</i>O - PU<i>N</i>CH is being developed by Carlos Torres in order to practice making games for learning purposes only!</p>
+    <br>
+    <p style="text-align: center; color:#E94B3CFF;">u<i>N</i>O - Pu<i>N</i>CH is being developed by Carlos Torres in order to practice making games for learning purposes only!</p>
 
     <div style="text-align: center;" class="container">
         <img id="los" src="asset/Sprite-Carlos.gif"></img><img id="punchbag" src="asset/Sprite-PunchBag.gif"></img>
-     
+
         <br>
 
-<br>
+        <br>
 
-       
 
-        <h6 style="text-align: center; color:#E94B3CFF;"><b><u>Controls </b></u>  : W or upArrow= UP | A or leftArrow= LEFT | S or downArrow= DOWN | D or downArrow= RIGHT | SPACE= PUNCH</h6>
-   
-     <br>
 
-       
-      
+        <h6 style="text-align: center; color:#E94B3CFF;"><b><u>Controls </b></u> : W or upArrow= UP | A or leftArrow= LEFT | S or downArrow= DOWN | D or downArrow= RIGHT | SPACE= PUNCH</h6>
+
+        <br>
+
+
+
 
         <div id="content" style="align-content: center; display: none;"></div>
         <!--add hidden to display -->
-  
 
-     
+
+
     </div>
     <script>
-    var game = document.getElementById("content");
-function startGame() {
-    
-    
-    if (game.style.display = "none") {
-        game.style.display = "block";
-    }
-}
+        var game = document.getElementById("content");
+        var s = document.getElementById("punchs");
 
+        function startGame() {
 
-</script>
+            s.play();
+            if (game.style.display = "none") {
+                game.style.display = "block";
+            }
 
-        <!-- Placed at the end of the document so the pages load faster -->
+        }
+
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
