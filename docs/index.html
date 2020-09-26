@@ -17,23 +17,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Place your stylesheet here-->
+    <link rel="stylesheet" href="index.css">
 
-    <script type="text/javascript" src="phaser.js"></script>
-    <script type="text/javascript" src="world1.js"></script>
-    <script type="text/javascript" src="unoPunch.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="phaser.min.js"></script>
 
-    <style>
-        canvas {
-            text-align: center;
-        }
 
-        button#startGame.btn.btn-outline-warning:hover {
-            color: #E94B3CFF;
-        }
-
-    </style>
 
 
 
@@ -41,57 +29,75 @@
 
 <body style="background-color:#393b44;">
 
-    <nav class="navbar navbar-light" style="text-align: center;  background-color: #E94B3CFF; color: #393b44;">
-        <h4 style="text-align: center; color: #393b44;"><b>u<i>N</i>O - Pu<i>N</i>CH</b></h4>
+    <nav class="navbar navbar-light" style="text-align: center;  background-color: #E94B3CFF; color: #393b44; align-content: center;">
+        <h3 style="text-align: center; color: #393b44; align-content: center;"> <b>u<i>N</i>O - Pu<i>N</i>CH</b> </h3>
+
         <audio src="asset/PUNCH.mp3" id="punchs" type="audio/mpeg"></audio>
-        <button onclick="startGame()" id="startGame" type="button" class="btn btn-outline-warning" style="background-color: #393b44;">Launch Game</button>
+
     </nav>
 
     <br>
-    <p style="text-align: center; color:#E94B3CFF;">u<i>N</i>O - Pu<i>N</i>CH is being developed by Carlos Torres in order to practice making games for learning purposes only!</p>
+
 
     <div style="text-align: center;" class="container">
         <img id="los" src="asset/Sprite-Carlos.gif"></img><img id="punchbag" src="asset/Sprite-PunchBag.gif"></img>
 
         <br>
+        <p style="text-align: center; color:#E94B3CFF;">u<i>N</i>O - Pu<i>N</i>CH is being developed by Carlos Torres in order to practice making games for learning purposes only!</p>
 
-        <br>
-
-
-
-        <h6 style="text-align: center; color:#E94B3CFF;"><b><u>Controls </b></u> : W or upArrow= UP | A or leftArrow= LEFT | S or downArrow= DOWN | D or downArrow= RIGHT | SPACE= PUNCH</h6>
-
-        <br>
-
-
-
-
-        <div id="content" style="align-content: center; display: none;"></div>
-        <!--add hidden to display -->
 
 
 
     </div>
-    <script>
-        var game = document.getElementById("content");
+
+    <div style="text-align: center;" id="images">
+        <img id="mainc" style="display: none;" src="asset/Sprite-Carlos1.png"></img>
+        <img id="right" style="display:none;" src="asset/Sprite-Carlos2.png"></img>
+        <img id="punch"  src="asset/Sprite-Carlos4.png"></img>
+        <img id="enemy" src="asset/Sprite-PunchBag.gif"></img>
+        <img id="enemy2" style="display:none;" src="asset/Sprite-PunchBag2.png"></img>
+<div class="controls">
+<button onclick="left()" id="left">LEFT</button>
+        <button onclick="right()" id="right">RIGHT</button><br>
+        <button onclick="punchx()" id="punch">PUNCH</button>
+</div>
+    </div>
+  
+ <script>
+      
+       
         var s = document.getElementById("punchs");
 
-        function startGame() {
 
+        function punchx() {
             s.play();
-            if (game.style.display = "none") {
-                game.style.display = "block";
-            }
+
+          
 
         }
+     function right() {
+  const r = document.getElementById('punch');
+  r.style.left = `${r.offsetLeft + 30}px`;
+}
+         function left() {
+  const l = document.getElementById('punch');
+  l.style.left = `${l.offsetLeft - 30}px`;
+}
+       function punchx() {
+       s.play();
+            var img = document.getElementById('enemy');
+        img.style.transform = 'rotate(90deg)';
+  }
 
     </script>
+   
+
+
+
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <br>
-</body>
-
-</html>
+</body></html>

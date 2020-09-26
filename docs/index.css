@@ -1,0 +1,38 @@
+div#images {
+  padding: 20em  ;
+
+    background-image: url(asset/UP-Bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+
+}
+
+img#punch {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+ display: block;
+}
+img#punch {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+ 
+}
+
+img#enemy, img#enemy2 {
+    position: absolute;
+    top: 65%;
+ left: 65%;
+ 
+  
+ 
+    }
+
+
+
+button {
+   background-color:  #E94B3CFF;
+    color:#393b44;
+}
