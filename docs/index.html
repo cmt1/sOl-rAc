@@ -57,9 +57,11 @@
         <img id="enemy" src="asset/Sprite-PunchBag.gif"></img>
         <img id="enemy2" style="display:none;" src="asset/Sprite-PunchBag2.png"></img>
 <div class="controls">
-<button onclick="left()" id="left">LEFT</button>
-        <button onclick="right()" id="right">RIGHT</button><br>
-        <button onclick="punchx()" id="punch">PUNCH</button>
+    <button onclick="up()" id="up">	&#x2191;</button><br>
+<button onclick="left()" id="left">&#x21DC;</button>
+      <button onclick="punchx()" id="punch">P</button>
+        <button onclick="right()" id="right">&#x21DD;</button><br>
+      <button onclick="down()" id="down">	&#x2193;</button>
 </div>
     </div>
   
@@ -82,6 +84,14 @@
          function left() {
   const l = document.getElementById('punch');
   l.style.left = `${l.offsetLeft - 30}px`;
+}
+             function up() {
+  const l = document.getElementById('punch');
+  l.style.top = `${l.offsetTop - 30}px`;
+}
+             function down() {
+  const l = document.getElementById('punch');
+  l.style.top = `${l.offsetTop + 30}px`;
 }
        function punchx() {
        s.play();

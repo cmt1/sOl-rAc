@@ -29,10 +29,18 @@ img#enemy, img#enemy2 {
   
  
     }
-
+div.controls{
+    text-align: center;
+    position: fixed;
+    
+}
 
 
 button {
    background-color:  #E94B3CFF;
     color:#393b44;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-style: solid;
 }
