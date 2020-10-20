@@ -9,7 +9,7 @@
     <link rel="icon" href="asset/carlos.favicon.png">
     <title>uNO-PuNCH</title>
 
-
+    <script type="text/javascript" src="index.js"></script>
     <!--Template based on URL below-->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
@@ -19,7 +19,7 @@
     <!-- Place your stylesheet here-->
     <link rel="stylesheet" href="index.css">
 
-    <script type="text/javascript" src="index.js"></script>
+
 
 
 
@@ -50,57 +50,44 @@
 
     </div>
 
-    <div style="text-align: center;" id="images">
-        <img id="mainc" style="display: none;" src="asset/Sprite-Carlos1.png"></img>
-        <img id="right" style="display:none;" src="asset/Sprite-Carlos2.png"></img>
-        <img id="punch"  src="asset/Sprite-Carlos4.png"></img>
+  
+  <div style="text-align: center;" id="images">
+        <img id="mainc"  src="asset/Sprite-Carlos1.png"></img>
+        <img id="right"  style="display:none;" src="asset/Sprite-Carlos2.png"></img>
+        <img id="punch" style="display: none;" src="asset/Sprite-Carlos4.png"></img>
         <img id="enemy" src="asset/Sprite-PunchBag.gif"></img>
         <img id="enemy2" style="display:none;" src="asset/Sprite-PunchBag2.png"></img>
-<div class="controls">
-    <button onclick="up()" id="up">	&#x2191;</button><br>
-<button onclick="left()" id="left">&#x21DC;</button>
-      <button onclick="punchx()" id="punch">P</button>
-        <button onclick="right()" id="right">&#x21DD;</button><br>
-      <button onclick="down()" id="down">	&#x2193;</button>
-</div>
-    </div>
-  
- <script>
-      
        
-        var s = document.getElementById("punchs");
+    </div> 
+<div class="controls">
+            <h6 style="text-align: center; color:#E94B3CFF;"><u>Controls</u></h6>
+            <button onclick="up()" id="up"> &#x2191;</button><br>
+            <button onclick="left()" id="left">&#x21DC;</button>
+            <button onclick="punchx(); punchs();  mover();" id="punch">P</button>
+            <button onclick="right(); move(); mover();" id="right">&#x21DD;</button><br>
+            <button onclick="down()" id="down"> &#x2193;</button>
+        </div>
+
+    <script>
+
+ var s = document.getElementById("punchs");
 
 
-        function punchx() {
-            s.play();
+ function punchx() {
+     s.play();
 
-          
+}
 
-        }
-     function right() {
-  const r = document.getElementById('punch');
-  r.style.left = `${r.offsetLeft + 30}px`;
-}
-         function left() {
-  const l = document.getElementById('punch');
-  l.style.left = `${l.offsetLeft - 30}px`;
-}
-             function up() {
-  const l = document.getElementById('punch');
-  l.style.top = `${l.offsetTop - 30}px`;
-}
-             function down() {
-  const l = document.getElementById('punch');
-  l.style.top = `${l.offsetTop + 30}px`;
-}
-       function punchx() {
-       s.play();
-            var img = document.getElementById('enemy');
-        img.style.transform = 'rotate(90deg)';
-  }
+        
+ function punchx() {
+     s.play();
+     var img = document.getElementById('enemy');
+     img.style.transform = 'rotate(90deg)';
+ }
+
 
     </script>
-   
+
 
 
 
@@ -110,4 +97,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <br>
-</body></html>
+</body>
+
+</html>

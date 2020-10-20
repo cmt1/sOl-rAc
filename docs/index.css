@@ -12,9 +12,15 @@ img#punch {
     position: absolute;
     top: 65%;
     left: 35%;
- display: block;
+ 
 }
-img#punch {
+img#mainc {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+ 
+}
+img#right {
     position: absolute;
     top: 65%;
     left: 35%;
@@ -31,7 +37,9 @@ img#enemy, img#enemy2 {
     }
 div.controls{
     text-align: center;
-    position: fixed;
+
+  
+ 
     
 }
 
