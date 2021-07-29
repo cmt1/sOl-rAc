@@ -45,29 +45,29 @@
         <br>
         <p style="text-align: center; color:#E94B3CFF;">u<i>N</i>O - Pu<i>N</i>CH is being developed by Carlos Torres in order to practice making games for learning purposes only!</p>
 
-<p style="text-align: center; color:#E94B3CFF;"><b>RULES:</b> You only get one chance to punch the bag. Move and time it right!</p>
+<p style="text-align: center; color:#E94B3CFF;"><b>RULES:</b> You only get 1 chance to punch the bag. Move and time it right!</p>
 
 
     </div>
-
-  
-  <div style="text-align: center;" id="images">
-        <img id="mainc"  src="asset/Sprite-Carlos1.png"></img>
-        <img id="right"  style="display:none;" src="asset/Sprite-Carlos2.png"></img>
-        <img id="punch" style="display: none;" src="asset/Sprite-Carlos4.png"></img>
-        <img id="enemy" src="asset/Sprite-PunchBag.gif"></img>
-        <img id="enemy2" style="display:none;" src="asset/Sprite-PunchBag2.png"></img>
-       
-    </div> 
     <br>
 <div class="controls">
-            <h6 style="text-align: center; color:#E94B3CFF;"><u>Controls</u></h6>
+            <h6 style="text-align: center; color:#E94B3CFF;"><u>CONTROL</u></h6>
             <!--<button onclick="up()" id="up"> &#x2191;</button><br>
             <button onclick="left()" id="left">&#x21DC;</button>-->
-            <button onclick="punchx(); punchs();  mover();" id="punch"><span id="punch">Pu<i>N</i>CH</span></button>
+            <button onclick="punchx();mover();" onclick="punchs();" id="punch"><span id="punch">Pu<i>N</i>CH</span></button>
             <button onclick="right(); move(); mover();" id="right">&#x21DD;</button><br>
            <!---- <button onclick="down()" id="down"> &#x2193;</button>-->
         </div>
+  <br>
+  <div style="text-align: center;" id="images">
+        <img id="mainc"  src="asset/Sprite-Carlos1.png"></img>
+        <img id="right"  style="display:none;" src="asset/Sprite-Carlos2.png"></img>
+        <img id="punch" style="display:none;" src="asset/Sprite-Carlos4.png"></img>
+        <img id="enemy" src="asset/Sprite-PunchBag1.png"></img>
+        <img id="enemy2" style="display:none;" src="asset/Sprite-PunchBag2.png"></img>
+       
+    </div> 
+
 
     <script>
 
@@ -83,8 +83,22 @@
  function punchx() {
      s.play();
      var img = document.getElementById('enemy');
+     
+     var img3 = document.getElementById('mainc');
      img.style.transform = 'rotate(90deg)';
+     
+     img3.style.display = 'none';
  }
+
+ //Punch Function//
+function punchs() {
+   var img1 = document.getElementById('punch');
+   var img3 = document.getElementById('mainc');
+  if (img3.style.display == 'none') {
+        img1.style.display == 'visible';
+    }
+}
+
 
 
     </script>
