@@ -1,35 +1,35 @@
-div#images {
-  padding: 20em  ;
+/*div#images {
+  padding: 25em  ;
 
     background-image: url(asset/UP-Bg.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
 
-}
+}*/
 
 img#punch {
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 35%;
  
 }
 img#mainc {
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 35%;
  
 }
 img#right {
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 35%;
  
 }
 
 img#enemy, img#enemy2 {
     position: absolute;
-    top: 65%;
+    top: 55%;
  left: 65%;
  
   
@@ -51,4 +51,11 @@ button {
     height: 50px;
     width: 50px;
     border-style: solid;
+}
+
+span#punch {
+
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
 }

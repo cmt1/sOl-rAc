@@ -42,7 +42,7 @@ function mover() {
 }
 
 
- 
+ //Punch Function//
 function punchs() {
    var img1 = document.getElementById('punch');
   if (img1.style.display === "none") {
