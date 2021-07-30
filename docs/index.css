@@ -31,9 +31,21 @@ img#enemy, img#enemy2 {
     position: absolute;
     top: 65%;
  left: 65%;
+ opacity: 0;
+ animation: opacity 3s normal forwards infinite;
+ animation-delay: 1s;
  
-  
- 
+    }
+    @keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity:0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 div.controls{
     text-align: center;
@@ -59,3 +71,11 @@ span#punch {
     text-align: center;
     font-weight: bold;
 }
+/*Center
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 500px;
+*/
